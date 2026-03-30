@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(./qwerty.webp);
+}
+
+nav{
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    top: 10px;
+    right: 10px;
+}
+
+button{
+    cursor: pointer;
+}
+
+.nav{
+    padding: 15px;
+    border: 1px solid black;
+    background: rgba(165, 164, 164, 0.412); 
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.319);
+    border-radius: 12px;
+}
+
+.quest-title{
+    padding: 20px;
+    color: white;
+}
+
+.get-a-quest{
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background: rgba(165, 164, 164, 0.858); 
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.319);
+}
+
+.container-for-quest{
+    width: 60%;
+    min-height: 400px;
+    background-color: white;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.02); 
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);;
+    padding: 20px;
+}
+
+.quest{
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    border-radius: 20px;
+    background: rgba(134, 134, 134, 0.765); 
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.319);
+    justify-content: space-between;
+}
+
+.quest:hover{
+    background: rgba(210, 209, 209, 0.831); 
+}
+
+.quest_text{
+    font-size: 25px;
+
+}
+
+.quest__but{
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.but-miss{
+    background-color: red;
+}
+.but-in-progress{
+    background-color: orange;
+}
+
+.but-done{
+    background-color: green;
+}
