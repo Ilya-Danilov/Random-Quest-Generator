@@ -10,7 +10,7 @@ body{
     justify-content: center;
     text-align: center;
     align-items: center;
-    background-image: url('background.jpg');
+    background-image: url('./background.jpg');
     background-size: 105%;
 }
 
