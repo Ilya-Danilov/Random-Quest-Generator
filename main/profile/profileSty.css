@@ -1,0 +1,83 @@
+.window-profile{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(3px);
+}
+
+.profile{
+    top: 15%;
+    background-color: white;
+    width: 500px;
+    height: 600px;
+    border-radius: 20px;
+    background: rgba(134, 134, 134, 0.514); 
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.319);
+    box-shadow: 0 0 15px 5px rgb(173, 173, 173);
+    z-index: 9999;
+}
+.profile:hover{
+    background: rgba(207, 206, 206, 0.752); 
+}
+
+.name-profile{
+    margin-top: 30px;
+    font-size: 40px;
+}
+
+.exit-on-profile{
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    right: 5px;
+    top: 5px;
+    border-radius: 50px;
+    background-color: rgba(151, 151, 151, 0);
+    background-image: url(./exit.png);
+    background-size: 100%;
+}
+
+.date-regis{
+    font-size: 20px;
+    margin-bottom: 50px;
+    margin-top: 15px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+}
+
+.info-child{
+    display: flex;
+    flex-direction: column;
+}
+
+.progress{
+    margin-bottom: 35px;
+}
+
+.p-for-pracent{
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.pracent{
+    font-size: 50px;
+}
+
+.p-for-achievements{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.img-achievements{
+    width: 30px;
+    height: 30px;
+    box-sizing: 100%;
+}

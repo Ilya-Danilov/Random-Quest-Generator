@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script defer src="./script.js"></script>
+    <script defer src="./profile/profileScript.js"></script>
     <link rel="stylesheet" href="./sty.css">
+    <link rel="stylesheet" href="./profile/profileSty.css">
 </head>
+
 <body>
     <nav>
-        <button id="profile" class="nav profile"></button>
-        <button id="settings" class="nav settings"></button>
+        <button id="profile" class="nav but-profile"></button>
+        <button id="settings" class="nav but-settings"></button>
     </nav>
     <h1 class="quest-title">Ваши квесты</h1>
     <button id="get-a-quest" class="get-a-quest">Получить квест</button>
     <div class="container-for-quest">
     </div>
+    <div class="window-profile">
+        <div id="profile" class="profile">
+            <button class="exit-on-profile"></button>
+            <h2 id="name-profile" class="name-profile">Илья</h2>
+            <p class="date-regis">Дата регистрации: 8 febrory 2023 year</p>
+            <div class="info">
+                <div class="info-child progress">
+                    <p class="p-for-pracent">Процент выполненых квестов:</p>
+                    <p class="pracent" >100%</p>
+                </div>
+                <div class="info-child achievements">
+                    <p class="p-for-achievements">Достижения:</p>
+                    <div>
+                        <img class="img-achievements" src="./png-klev-club-m6sy-p-znachok-profilya-png-21.png" alt="">
+                        <img class="img-achievements" src="./qwerty.webp" alt="">
+                        <img class="img-achievements" src="./—Pngtree—settings icon_4491632.png" alt="">
+                        <img class="img-achievements" src="./profile/exit.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>
