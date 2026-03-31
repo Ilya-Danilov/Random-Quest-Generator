@@ -12,6 +12,7 @@ body{
     flex-direction: column;
     align-items: center;
     background-image: url(./qwerty.webp);
+    background-color: black;
 }
 
 nav{
@@ -53,7 +54,6 @@ button{
 
 .container-for-quest{
     width: 60%;
-    min-height: 400px;
     background-color: white;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.02); 
@@ -100,4 +100,15 @@ button{
 
 .but-done{
     background-color: green;
+}
+
+.profile{
+    background-image: url(./png-klev-club-m6sy-p-znachok-profilya-png-21.png);
+    background-size: cover;
+
+}
+
+.settings{
+    background-image: url(./—Pngtree—settings\ icon_4491632.png);
+    background-size: 105%;
 }
