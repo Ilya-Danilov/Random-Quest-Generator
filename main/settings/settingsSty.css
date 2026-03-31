@@ -1,0 +1,29 @@
+.exit-on-settings{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    background-color: rgba(151, 151, 151, 0);
+    background-image: url(../profile/exit.png);
+    background-size: 100%;
+}
+
+.h-for-level{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.complexity{
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(222, 209, 209, 0.471); 
+    border: 1px solid rgba(255, 255, 255, 0.319);
+    margin-bottom: 20px;
+}
+
+.h-for-category{
+    margin-bottom: 20px;
+}
