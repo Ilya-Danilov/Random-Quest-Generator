@@ -10,7 +10,7 @@ const windowSettings = document.getElementById('window-settings')
 
 butSettings.addEventListener('click', () => {
     windowSettings.style.display = 'flex'
-    
+    localStorageFun.getSettings(level, inputCategoty)
 })
 
 //Сохранение настроек в локал сторедж 

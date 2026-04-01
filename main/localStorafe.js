@@ -18,5 +18,10 @@ export const firstSettings = (inputCategoty, level) => {
 
 export const getSettings = (select, checkbox) => {
     const settings = JSON.parse(localStorage.getItem('setting'))
-    
+    select.value = settings.level
+    checkbox.forEach((check) => {
+        if(settings.category.includes(check.value)){
+            check.checked = true
+        }
+    })
 }

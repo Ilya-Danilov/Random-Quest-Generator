@@ -3,10 +3,9 @@ import * as localStorageFun from './localStorafe.js'
 
 //Находим нжные переменные
 const greeting = document.getElementById('greeting-back')
-const formLevel = document.getElementById('form-setting')
-const level = document.getElementById('complexity-set')
-const inputCategoty = document.querySelectorAll('.category-set')
-const formSettings = document.getElementById('form-setting')
+const formLevel = document.getElementById('form-greeting')
+const level = document.getElementById('complexity')
+const inputCategoty = document.querySelectorAll('.category')
 
 //Если пользователь первый раз заходит вызываем приветствие
 if(JSON.parse(localStorage.getItem('AboutTheUsers')).firstVisit === true){
