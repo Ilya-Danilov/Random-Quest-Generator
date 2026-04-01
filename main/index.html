@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script type="module" defer src="./script.js"></script>
-    <script defer src="./profile/profileScript.js"></script>
-    <script defer src="./settings/settngsScript.js"></script>
+    <script  defer src="./profile/profileScript.js"></script>
+    <script type="module" defer src="./settings/settngsScript.js"></script>
     <script defer src="./dataScript.js"></script>
     <!-- <script defer src="./localStorafe.js"></script> -->
     <link rel="stylesheet" href="./sty.css">
@@ -83,11 +83,10 @@
     </div>
     <div class="window-back" id="window-settings">
         <div class="window">
-            <form action="" class="form-setting"></form>
-            <button class="exit-on-settings" id="exit-on-settings" type="submit"></button>
+            <form action="" class="form-setting" id="form-setting">
             <h2 class="h-for-level">Уровень сложности:</h2>
 
-            <select class="complexity" name="" id="complexity">
+            <select class="complexity" name="" id="complexity-set">
                 <option value="all">Все</option>
                 <option value="easy">Лёгкий</option>
                 <option value="middle">Средний</option>
@@ -95,13 +94,14 @@
             </select>
             <h2 class="h-for-category">Категории:</h2>
             <fieldset>
-                <input type="checkbox" class="category">
+                <input type="checkbox" class="category-set" value="communication">
                 <label for="category">Коммуникация</label>
-                <input type="checkbox" class="category">
+                <input type="checkbox" class="category-set" value="creation">
                 <label for="category">Творчество</label>
-                <input type="checkbox" class="category">
+                <input type="checkbox" class="category-set" value="introspection">
                 <label for="category">Самоанализ</label>
             </fieldset>
+            <button type="submit" class="exit-on-settings" id="exit-on-settings" type="submit"></button>
             </form>
         </div>
     </div>

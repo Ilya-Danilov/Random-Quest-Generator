@@ -16,4 +16,7 @@ export const firstSettings = (inputCategoty, level) => {
 
 }
 
-
+export const getSettings = (select, checkbox) => {
+    const settings = JSON.parse(localStorage.getItem('setting'))
+    
+}
