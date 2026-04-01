@@ -1,0 +1,28 @@
+.greeting{
+    width: 60%;
+    height: 90%;
+}
+
+.greeting-back{
+    z-index: 9999;
+}
+
+.h-for-greeting{
+    font-size: 35px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.p-for-greeting{
+    font-size: 20px;
+}
+
+.save{
+    margin-top: 325px;
+    padding: 20px 50px;
+    border-radius: 20px;
+    background: rgba(0, 128, 0, 0.88);
+}
+.save:hover{
+    background: rgb(0, 128, 0);
+}

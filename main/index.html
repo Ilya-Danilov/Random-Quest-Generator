@@ -5,15 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script defer src="./script.js"></script>
+    <script type="module" defer src="./script.js"></script>
     <script defer src="./profile/profileScript.js"></script>
     <script defer src="./settings/settngsScript.js"></script>
+    <script defer src="./dataScript.js"></script>
+    <!-- <script defer src="./localStorafe.js"></script> -->
     <link rel="stylesheet" href="./sty.css">
     <link rel="stylesheet" href="./profile/profileSty.css">
     <link rel="stylesheet" href="./settings/settingsSty.css">
+    <link rel="stylesheet" href="./adaptiveSty.css">
+    <link rel="stylesheet" href="./greetingSty.css">
 </head>
 
 <body>
+    <div class="window-back greeting-back" id="greeting-back">
+        <div class="window greeting" id="greeting">
+            <h2 class="h-for-greeting">Добро пожаловать в генератор квестов!</h2>
+            <p class="p-for-greeting">Выберете подходящие вам настройки для квестов. После изменить их можно будет в
+                настройках в правом верхнем углу</p>
+            <form action="" class="form-greeting" id="form-greeting">
+
+                <h2 class="h-for-level">Уровень сложности:</h2>
+
+                <select class="complexity" name="" id="complexity">
+                    <option class="elements-of-select" value="all">Все</option>
+                    <option class="elements-of-select" value="easy">Лёгкий</option>
+                    <option class="elements-of-select" value="middle">Средний</option>
+                    <option class="elements-of-select" value="hard">Трудный</option>
+                </select>
+                <h2 class="h-for-category">Категории:</h2>
+                <fieldset id="list-category">
+                    <input type="checkbox" class="category" value="communication">
+                    <label for="category">Коммуникация</label>
+                    <input type="checkbox" class="category" value="creation">
+                    <label for="category">Творчество</label>
+                    <input type="checkbox" class="category" value="introspection">
+                    <label for="category">Самоанализ</label>
+                </fieldset>
+                <button type="submit" class="save" id="save">Сохранить</button>
+            </form>
+        </div>
+    </div>
     <nav>
         <button id="profile" class="nav but-profile"></button>
         <button id="settings" class="nav but-settings"></button>
@@ -21,24 +53,29 @@
     <h1 class="quest-title">Ваши квесты</h1>
     <button id="get-a-quest" class="get-a-quest">Получить квест</button>
     <div class="container-for-quest">
+        <div class="card-quest-resolved card-quest" id="card-quest-resolved">
+
+        </div>
+        <div class="card-quest-skipped card-quest" id="card-quest-skipped">
+
+        </div>
+        <div class="card-quest-active card-quest" id="card-quest-active">
+
+        </div>
     </div>
     <div class="window-back window-profile" id="window-profile">
         <div id="profile" class="profile window">
             <button class="exit-on-profile" id="exit-on-profile"></button>
-            <h2 id="name-profile" class="name-profile">Илья</h2>
-            <p class="date-regis">Дата регистрации: 8 febrory 2023 year</p>
+            <h2 id="name-profile" class="name-profile"></h2>
+            <p class="date-regis" id="date-regis">Дата регистрации: </p>
             <div class="info">
                 <div class="info-child progress">
                     <p class="p-for-pracent">Процент выполненых квестов:</p>
-                    <p class="pracent" >100%</p>
+                    <p class="pracent"></p>
                 </div>
                 <div class="info-child achievements">
                     <p class="p-for-achievements">Достижения:</p>
                     <div>
-                        <img class="img-achievements" src="./png-klev-club-m6sy-p-znachok-profilya-png-21.png" alt="">
-                        <img class="img-achievements" src="./qwerty.webp" alt="">
-                        <img class="img-achievements" src="./—Pngtree—settings icon_4491632.png" alt="">
-                        <img class="img-achievements" src="./profile/exit.png" alt="">
                     </div>
                 </div>
             </div>
@@ -46,8 +83,10 @@
     </div>
     <div class="window-back" id="window-settings">
         <div class="window">
-            <button class="exit-on-settings" id="exit-on-settings"></button>
+            <form action="" class="form-setting"></form>
+            <button class="exit-on-settings" id="exit-on-settings" type="submit"></button>
             <h2 class="h-for-level">Уровень сложности:</h2>
+
             <select class="complexity" name="" id="complexity">
                 <option value="all">Все</option>
                 <option value="easy">Лёгкий</option>
@@ -63,6 +102,7 @@
                 <input type="checkbox" class="category">
                 <label for="category">Самоанализ</label>
             </fieldset>
+            </form>
         </div>
     </div>
 

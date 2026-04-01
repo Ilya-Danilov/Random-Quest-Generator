@@ -1,0 +1,9 @@
+@media (max-width: 750px) {
+    .container-for-quest{
+        width: 95%;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+    }
+}
