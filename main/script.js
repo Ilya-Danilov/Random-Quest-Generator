@@ -10,7 +10,9 @@ const inputCategoty = document.querySelectorAll('.category')
 const createQuest = document.getElementById('get-a-quest')
 const containerForQuest = document.getElementById('container-for-quest')
 
-fun.drawingCardQuest(containerForQuest)
+if (localStorage.getItem('activ') !== null) {
+    fun.drawingCardQuest(containerForQuest)
+}
 
 //Если пользователь первый раз заходит вызываем приветствие
 if (JSON.parse(localStorage.getItem('AboutTheUsers')).firstVisit === true) {
@@ -35,7 +37,7 @@ createQuest.addEventListener('click', () => {
     questInLocal.push(quest)
     localStorage.setItem('activ', JSON.stringify(questInLocal))
     fun.drawingCardQuest(containerForQuest)
-    
+
 })
 
 
