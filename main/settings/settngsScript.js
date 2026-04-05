@@ -14,7 +14,8 @@ butSettings.addEventListener('click', () => {
 })
 
 //Сохранение настроек в локал сторедж 
-formSettings.addEventListener('submit', () => {
+formSettings.addEventListener('submit', (e) => {
+    e.preventDefault()
     localStorageFun.firstSettings(inputCategoty, level)
     const dataUser = JSON.parse(localStorage.getItem('AboutTheUsers'))
     dataUser.firstVisit = false

@@ -14,4 +14,6 @@ window.addEventListener('submit', (e) => {
     window.location.href = '../main/index.html'
 })
 
-localStorage.setItem('setting', JSON.stringify({'level': 'easy', 'category': []}))
+if(localStorage.getItem('setting') === null){
+    localStorage.setItem('setting', JSON.stringify({'level': 'easy', 'category': []}))
+}

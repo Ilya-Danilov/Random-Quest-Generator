@@ -1,9 +1,12 @@
-@media (max-width: 750px) {
+@media (max-width: 885px) {
     .container-for-quest{
         width: 95%;
     }
     nav{
         display: flex;
         flex-direction: column;
+    }
+    .div-but-condition{
+        width: 95%;
     }
 }
