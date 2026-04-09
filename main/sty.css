@@ -222,3 +222,31 @@ button{
     display: flex;
     gap: 10px;
 }
+
+.divdsvsifvosfvnoasf{
+    background: rgba(235, 155, 7, 0.47);
+}
+
+.yellow{
+    background: rgba(255, 225, 0, 0.601);
+}
+
+.yellow:hover{
+    background: rgba(255, 204, 0, 0.881);
+}
+
+.green{
+    background: rgba(44, 175, 0, 0.601);
+}
+
+.green:hover{
+    background: rgb(18, 146, 2);
+}
+
+.red{
+    background: rgba(255, 0, 0, 0.599);
+}
+
+.red:hover{
+    background: red
+}
