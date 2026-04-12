@@ -8,7 +8,7 @@
     <script type="module" defer src="./script.js"></script>
     <script  defer src="./profile/profileScript.js"></script>
     <script type="module" defer src="./settings/settngsScript.js"></script>
-    <script defer src="./dataScript.js"></script>
+    <script id="data" defer src="./dataScript.js"></script>
     <!-- <script defer src="./localStorafe.js"></script> -->
     <link rel="stylesheet" href="./sty.css">
     <link rel="stylesheet" href="./profile/profileSty.css">
@@ -41,6 +41,12 @@
                     <label for="category">Творчество</label>
                     <input type="checkbox" class="category" value="introspection">
                     <label for="category">Самоанализ</label>
+                    <input type="checkbox" class="category-set" value="kindness">
+                    <label for="category">Доброта и помощь</label>
+                    <input type="checkbox" class="category-set" value="health">
+                    <label for="category">Здоровье</label>
+                    <input type="checkbox" class="category-set" value="productivity">
+                    <label for="category">Обучение и продуктивность</label>
                 </fieldset>
                 <button type="submit" class="save" id="save">Сохранить</button>
             </form>
@@ -66,12 +72,12 @@
             <p class="date-regis" id="date-regis">Дата регистрации: </p>
             <div class="info">
                 <div class="info-child progress">
-                    <p class="p-for-pracent">Процент выполненых квестов:</p>
-                    <p class="pracent"></p>
+                    <p class="p-for-pracent">Ваше к/д:</p>
+                    <p class="pracent" id="pracent"></p>
                 </div>
                 <div class="info-child achievements">
                     <p class="p-for-achievements">Достижения:</p>
-                    <div>
+                    <div id="ach">
                     </div>
                 </div>
             </div>
@@ -96,6 +102,12 @@
                 <label for="category">Творчество</label>
                 <input type="checkbox" class="category-set" value="introspection">
                 <label for="category">Самоанализ</label>
+                <input type="checkbox" class="category-set" value="kindness">
+                <label for="category">Доброта и помощь</label>
+                <input type="checkbox" class="category-set" value="health">
+                <label for="category">Здоровье</label>
+                <input type="checkbox" class="category-set" value="productivity">
+                <label for="category">Обучение и продуктивность</label>
             </fieldset>
             <button type="submit" class="exit-on-settings" id="exit-on-settings" type="submit"></button>
             </form>

@@ -250,3 +250,41 @@ button{
 .red:hover{
     background: red
 }
+
+.bluer{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(3px);
+}
+
+.containerAch{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: 40%;
+    height: 70%;
+    background: rgba(188, 188, 188, 0.549);
+    border-radius: 15px;
+    align-items: center;
+    text-align: center;
+}
+.containerAch:hover{
+    background: rgba(227, 227, 227, 0.881);
+}
+
+.imgAch{
+    width: 50%;
+}
+
+.butDel{
+    padding: 5px;
+    background-color: green;
+    position: fixed;
+    bottom: 160px;
+}

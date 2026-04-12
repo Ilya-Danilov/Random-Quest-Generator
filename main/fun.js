@@ -1,3 +1,5 @@
+const ach = document.getElementById('ach')
+
 export const sortedQuests = () => {
     const setting = JSON.parse(localStorage.getItem('setting'))
     const data = JSON.parse(localStorage.getItem('data'))
@@ -73,12 +75,9 @@ export const createCard = (nameQuest, descriptionQuest, containerForQuest, id) =
     })
     butDone.addEventListener('click', () => {
             const countTrueQuest = JSON.parse(localStorage.getItem('AboutTheUsers'))
-            console.log(countTrueQuest)
             let countTrue = countTrueQuest.trueQuest
-            console.log(countTrueQuest.trueQuest)
             countTrue++
             countTrueQuest.trueQuest = countTrue
-            console.log(countTrueQuest.trueQuest)
             localStorage.setItem('AboutTheUsers', JSON.stringify(countTrueQuest))
         const arrCard = JSON.parse(localStorage.getItem('activ'))
         let card
@@ -99,9 +98,21 @@ export const createCard = (nameQuest, descriptionQuest, containerForQuest, id) =
         if (localStorage.getItem('activ') !== null) {
             drawingCardQuest(containerForQuest, 'activ')
         }
+        addAch(1, './ach/bronz_zvezda.png')
+        addAch(2, './ach/serebro_zvezda.webp')
+        addAch(5, './ach/gold_zvezda.png')
+        addAch(10, './ach/iz_zvezda.png')
+        addAch(20, './ach/yx.png')
+        addAch(50, './ach/kubok.png')
+        addAch(100,'./ach/100.png')
     })
 
     butSkip.addEventListener('click', () => {
+            const countFalseQuest = JSON.parse(localStorage.getItem('AboutTheUsers'))
+            let countFalse = countFalseQuest.falseQuest
+            countFalse++
+            countFalseQuest.falseQuest = countFalse
+            localStorage.setItem('AboutTheUsers', JSON.stringify(countFalseQuest))
         const arrCard = JSON.parse(localStorage.getItem('activ'))
         let card
         let count = 0
@@ -143,4 +154,52 @@ export const drawingCardQuest = (containerForQuest, condition) => {
     drawingQwest.forEach(element => {
         createCard(element.title, element.description, containerForQuest, element.id)
     });
+}
+
+const addAch = (numTrueQuest, herf) => {
+    const trueQuests = JSON.parse(localStorage.getItem('AboutTheUsers')).trueQuest
+    if(numTrueQuest === trueQuests){
+        const bluer = document.createElement('div')
+        const div = document.createElement('div')
+        const h = document.createElement('h2')
+        const p = document.createElement('p')
+        const img = document.createElement('img')
+        const but = document.createElement('button')
+        h.textContent = 'Вы получили достижение'
+        switch(true){
+            case numTrueQuest === 1:
+                p.textContent = 'Вы выполнили одно задание! Вы получили бронзовую звезду'
+                break;
+            case numTrueQuest === 2:
+                p.textContent = 'Вы выполнили два задания! Вы получили серебрянную звезду'
+                break;
+            case numTrueQuest === 5:
+                p.textContent = 'Вы выполнили пять заданий! Вы получили золотую звезду'
+                break;
+            case numTrueQuest === 10: 
+                p.textContent = 'Вы выполнили десять заданий! Вы полусили изумрудную звезду'
+                break;
+            case numTrueQuest === 20:
+                p.textContent = 'Вы выполнили целых двадцать заданий! Это сильно!'
+                break;
+        }
+        bluer.classList.add('bluer')
+        div.classList.add('containerAch')
+        h.classList.add('hAboutAch')
+        p.classList.add('description')
+        img.setAttribute('src', herf)
+        img.classList.add('imgAch')
+        but.classList.add('butDel')
+        but.setAttribute('id', 'burDel')
+        but.textContent = 'Продолжить'
+        div.append(h, p, img, but)
+        bluer.append(div)
+        document.body.append(bluer)
+        but.addEventListener('click', () => {
+            img.classList.remove('imgAch')
+            img.classList.add('img-achievements')
+            ach.append(img)
+            bluer.remove()
+        })
+    }
 }

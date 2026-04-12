@@ -1,12 +1,11 @@
 import * as localStorageFun from './localStorafe.js'
 import * as fun from './fun.js'
 
-
 //Находим нжные переменные
 const greeting = document.getElementById('greeting-back')
 const formLevel = document.getElementById('form-greeting')
 const level = document.getElementById('complexity')
-const inputCategoty = document.querySelectorAll('.category')
+const inputCategoty = document.querySelectorAll('.category-set')
 const createQuest = document.getElementById('get-a-quest')
 const containerForQuest = document.getElementById('container-for-quest')
 const butDoneQuests = document.getElementById('but-fo-done-cards')
@@ -33,6 +32,17 @@ formLevel.addEventListener('submit', (e) => {
 })
 
 createQuest.addEventListener('click', () => {
+    if(JSON.parse(localStorage.getItem('data')).length === 0){
+        if(window.confirm('Вы выполнили все квесты! Хотите начать решать квесты повторно? Статистика не сбросится')){
+            const oldScript = document.getElementById('data');
+            const newScript = document.createElement('script');
+            newScript.id = 'data';
+            newScript.src = oldScript.src;
+            newScript.defer = true;
+            oldScript.parentNode.replaceChild(newScript, oldScript);
+        }
+    }
+    else{
     const data = fun.sortedQuests()
     if(data.length !== 0){
     const numQuest = fun.randomQuest(0, data.length)
@@ -48,9 +58,9 @@ createQuest.addEventListener('click', () => {
     fun.drawingCardQuest(containerForQuest, 'activ')
     }
     else{
-        alert('База квестов прилегла отдохнуть, либо они закончились либо что то пошло не так. Попробуйте поменять настройки')
+        alert('База квестов прилегла отдохнуть. Попробуйте поменять настройки квесты еще есть просто другой категории или сложности')
     }
-
+    }
 })
 
 butDoneQuests.addEventListener('click', () => {

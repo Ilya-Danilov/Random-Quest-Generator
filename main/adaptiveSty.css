@@ -9,4 +9,19 @@
     .div-but-condition{
         width: 95%;
     }
+    .containerAch{
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .imgAch{
+        width: 70%;
+    }
+    .containerAch{
+        height: 60%;
+    }
+    .butDel{
+        bottom: 180px;
+    }
 }
