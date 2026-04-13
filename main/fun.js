@@ -1,4 +1,4 @@
-const ach = document.getElementById('ach')
+
 
 export const sortedQuests = () => {
     const setting = JSON.parse(localStorage.getItem('setting'))
@@ -198,7 +198,9 @@ const addAch = (numTrueQuest, herf) => {
         but.addEventListener('click', () => {
             img.classList.remove('imgAch')
             img.classList.add('img-achievements')
-            ach.append(img)
+            const dataUser = JSON.parse(localStorage.getItem('AboutTheUsers'))
+            dataUser.ach.push(numTrueQuest)
+            localStorage.setItem('AboutTheUsers', JSON.stringify(dataUser))
             bluer.remove()
         })
     }
