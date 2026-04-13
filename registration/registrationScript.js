@@ -14,6 +14,7 @@ window.addEventListener('submit', (e) => {
     window.location.href = '../main/index.html'
 })
 
+//Создание настроек по усолчанию
 if(localStorage.getItem('setting') === null){
     localStorage.setItem('setting', JSON.stringify({'level': 'easy', 'category': []}))
 }

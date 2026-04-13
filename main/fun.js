@@ -1,5 +1,4 @@
-
-
+//Функция сортирующая квесты
 export const sortedQuests = () => {
     const setting = JSON.parse(localStorage.getItem('setting'))
     const data = JSON.parse(localStorage.getItem('data'))
@@ -17,12 +16,14 @@ export const sortedQuests = () => {
         }
     });
     return sortedData
- }
+}
 
+//Функция рандома
 export const randomQuest = (min, max) => {
     return Math.random() * (max - min) + min
 }
 
+//Функция создающая карточки(активные, выполненые и пропущенные)
 export const createCard = (nameQuest, descriptionQuest, containerForQuest, id) => {
     const containerQuest = document.createElement('div')
     containerQuest.classList.add('quest')
@@ -54,11 +55,16 @@ export const createCard = (nameQuest, descriptionQuest, containerForQuest, id) =
     divNameAndBut.append(nameP, containerForBut);
     divDescription.append(descriptionP);
     cardQuestDiv.append(divNameAndBut, divDescription);
+
+    //Обработчик для открытия и закрытия описания квеста
     cardQuestDiv.addEventListener('click', (e) => {
         if (e.target.tagName === 'BUTTON') return
         divDescription.style.display = divDescription.style.display === 'none' ? 'block' : 'none';
     })
+
     containerForQuest.append(cardQuestDiv)
+
+    //Обработчик для квестово которые в процессе выполненя(просто цвет перекрашиваю)
     butProgress.addEventListener('click', () => {
         const checkStatus = JSON.parse(localStorage.getItem('activ'))
         const index = (el) => el.id === id
@@ -73,40 +79,42 @@ export const createCard = (nameQuest, descriptionQuest, containerForQuest, id) =
         }
         updateCardColor()
     })
-    butDone.addEventListener('click', () => {
-            const countTrueQuest = JSON.parse(localStorage.getItem('AboutTheUsers'))
-            let countTrue = countTrueQuest.trueQuest
-            countTrue++
-            countTrueQuest.trueQuest = countTrue
-            localStorage.setItem('AboutTheUsers', JSON.stringify(countTrueQuest))
-        const arrCard = JSON.parse(localStorage.getItem('activ'))
-        let card
-        let count = 0
-        arrCard.forEach(el => {
-            if(el.id === id){
-                card = el
-                arrCard.splice(count, 1)
-            }
-            else{
-                count++
-            }
-        })
-        localStorage.setItem('activ', JSON.stringify(arrCard))
-        const arrCardTo = JSON.parse(localStorage.getItem('complet'))
-        arrCardTo.push(card)
-        localStorage.setItem('complet', JSON.stringify(arrCardTo))
-        if (localStorage.getItem('activ') !== null) {
-            drawingCardQuest(containerForQuest, 'activ')
-        }
-        addAch(1, './ach/bronz_zvezda.png')
-        addAch(2, './ach/serebro_zvezda.webp')
-        addAch(5, './ach/gold_zvezda.png')
-        addAch(10, './ach/iz_zvezda.png')
-        addAch(20, './ach/yx.png')
-        addAch(50, './ach/kubok.png')
-        addAch(100,'./ach/100.png')
-    })
 
+        //Обработчик для выполненых карточек
+        butDone.addEventListener('click', () => {
+                const countTrueQuest = JSON.parse(localStorage.getItem('AboutTheUsers'))
+                let countTrue = countTrueQuest.trueQuest
+                countTrue++
+                countTrueQuest.trueQuest = countTrue
+                localStorage.setItem('AboutTheUsers', JSON.stringify(countTrueQuest))
+                const arrCard = JSON.parse(localStorage.getItem('activ'))
+                let card
+                let count = 0
+                arrCard.forEach(el => {
+                    if(el.id === id){
+                        card = el
+                        arrCard.splice(count, 1)
+                    }
+                    else{
+                        count++
+                    }
+                })
+                localStorage.setItem('activ', JSON.stringify(arrCard))
+                const arrCardTo = JSON.parse(localStorage.getItem('complet'))
+                arrCardTo.push(card)
+                localStorage.setItem('complet', JSON.stringify(arrCardTo))
+                if (localStorage.getItem('activ') !== null) {
+                    drawingCardQuest(containerForQuest, 'activ')
+                }
+                addAch(1, './ach/bronz_zvezda.png')
+                addAch(2, './ach/serebro_zvezda.webp')
+                addAch(5, './ach/gold_zvezda.png')
+                addAch(10, './ach/iz_zvezda.png')
+                addAch(20, './ach/yx.png')
+                addAch(50, './ach/kubok.png')
+                addAch(100,'./ach/100.png')
+    })
+    //Обработчик для пропущенных карточек 
     butSkip.addEventListener('click', () => {
             const countFalseQuest = JSON.parse(localStorage.getItem('AboutTheUsers'))
             let countFalse = countFalseQuest.falseQuest
@@ -133,6 +141,8 @@ export const createCard = (nameQuest, descriptionQuest, containerForQuest, id) =
             drawingCardQuest(containerForQuest, 'activ')
         }
     })
+
+        // Функция для проверки статуса(выполняется карточка или нет)
         const updateCardColor = () => {
         const questActive = JSON.parse(localStorage.getItem('activ'))
         const currentQuest = questActive?.find(el => el.id === id)
@@ -148,6 +158,8 @@ export const createCard = (nameQuest, descriptionQuest, containerForQuest, id) =
 
 }
 
+
+//функция которая отображает все карточки 
 export const drawingCardQuest = (containerForQuest, condition) => {
     containerForQuest.innerHTML = ''
     const drawingQwest = JSON.parse(localStorage.getItem(condition))
@@ -156,6 +168,8 @@ export const drawingCardQuest = (containerForQuest, condition) => {
     });
 }
 
+
+//Функция для достижений
 const addAch = (numTrueQuest, herf) => {
     const trueQuests = JSON.parse(localStorage.getItem('AboutTheUsers')).trueQuest
     if(numTrueQuest === trueQuests){

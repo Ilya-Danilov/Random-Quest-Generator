@@ -7,7 +7,7 @@ const butSettings = document.getElementById('settings')
 const windowSettings = document.getElementById('window-settings')
 
 
-
+//Открытие настроек
 butSettings.addEventListener('click', () => {
     windowSettings.style.display = 'flex'
     localStorageFun.getSettings(level, inputCategoty)

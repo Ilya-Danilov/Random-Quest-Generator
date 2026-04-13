@@ -31,6 +31,8 @@ formLevel.addEventListener('submit', (e) => {
     localStorage.setItem('AboutTheUsers', JSON.stringify(dataUser))
 })
 
+
+//Обработчик для создания квестов
 createQuest.addEventListener('click', () => {
     if(JSON.parse(localStorage.getItem('data')).length === 0){
         if(window.confirm('Вы выполнили все квесты! Хотите начать решать квесты повторно? Статистика не сбросится')){
@@ -63,6 +65,7 @@ createQuest.addEventListener('click', () => {
     }
 })
 
+//Обработчик для отображение выполненых квестов
 butDoneQuests.addEventListener('click', () => {
     fun.drawingCardQuest(containerForQuest, 'complet')
     const butQuestCondition = document.querySelectorAll('.container-for-but')
@@ -79,6 +82,8 @@ butActivQuests.addEventListener('click', () => {
     fun.drawingCardQuest(containerForQuest, 'activ')
 })
 
+
+//Обработчик для отображения пропущенных квестов
 butScipQuests.addEventListener('click', () => {
     fun.drawingCardQuest(containerForQuest, 'skip')
     const butQuestCondition = document.querySelectorAll('.container-for-but')

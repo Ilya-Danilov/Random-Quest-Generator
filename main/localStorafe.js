@@ -16,6 +16,7 @@ export const firstSettings = (inputCategoty, level) => {
 
 }
 
+//Функция которая отображает настройки
 export const getSettings = (select, checkbox) => {
     const settings = JSON.parse(localStorage.getItem('setting'))
     select.value = settings.level

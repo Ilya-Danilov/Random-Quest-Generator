@@ -1,9 +1,11 @@
+// Добваление квестов с состояниями хз как подругому назвать
 if(localStorage.getItem('data') === null){
     localStorage.setItem('activ', JSON.stringify([]))
     localStorage.setItem('skip', JSON.stringify([]))
     localStorage.setItem('complet', JSON.stringify([]))
 }
 
+//Квесты
 if(localStorage.getItem('data') === null || JSON.parse(localStorage.getItem('data')).length === 0){
     const questDatabase = [
     {
