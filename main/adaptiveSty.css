@@ -24,4 +24,30 @@
     .butDel{
         bottom: 180px;
     }
+    .card-quest-active{
+        padding: 10px;
+    }
+    .container-for-but{
+        gap: 5px;
+    }
+    .quest__but{
+        font-size: 10px;
+    }
+    .quest_text{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .card-quest-active{
+        align-items: start;
+        justify-content: start;
+    }
+    .div-name-and-but{
+        height: 96px;
+    }
+    .container-for-but{
+        flex-direction: column;
+        margin-bottom: 45px;
+    }
 }
