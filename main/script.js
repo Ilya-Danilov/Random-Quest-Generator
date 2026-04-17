@@ -3,7 +3,7 @@ import * as fun from './fun.js'
 
 
 if(localStorage.getItem('AboutTheUsers') === null){
-    window.location.href = '../registrationScript.js';
+    window.location.href = '../formRegistration.html';
 }
 //Находим нжные переменные
 const greeting = document.getElementById('greeting-back')
