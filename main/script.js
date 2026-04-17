@@ -1,6 +1,10 @@
 import * as localStorageFun from './localStorafe.js'
 import * as fun from './fun.js'
 
+
+if(localStorage.getItem('AboutTheUsers') === null){
+    window.location.href = '../registration/formRegistration.html';
+}
 //Находим нжные переменные
 const greeting = document.getElementById('greeting-back')
 const formLevel = document.getElementById('form-greeting')
