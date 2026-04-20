@@ -106,13 +106,13 @@ export const createCard = (nameQuest, descriptionQuest, containerForQuest, id) =
                 if (localStorage.getItem('activ') !== null) {
                     drawingCardQuest(containerForQuest, 'activ')
                 }
-                addAch(1, './ach/bronz_zvezda.png')
-                addAch(2, './ach/serebro_zvezda.webp')
-                addAch(5, './ach/gold_zvezda.png')
-                addAch(10, './ach/iz_zvezda.png')
-                addAch(20, './ach/yx.png')
-                addAch(50, './ach/kubok.png')
-                addAch(100,'./ach/100.png')
+                addAch(1, './main/ach/bronz_zvezda.png')
+                addAch(2, './main/ach/serebro_zvezda.webp')
+                addAch(5, './main/ach/gold_zvezda.png')
+                addAch(10, './main/ach/iz_zvezda.png')
+                addAch(20, './main/ach/yx.png')
+                addAch(50, './main/ach/kubok.png')
+                addAch(100,'./main/ach/100.png')
     })
     //Обработчик для пропущенных карточек 
     butSkip.addEventListener('click', () => {
@@ -195,6 +195,12 @@ const addAch = (numTrueQuest, herf) => {
                 break;
             case numTrueQuest === 20:
                 p.textContent = 'Вы выполнили целых двадцать заданий! Это сильно!'
+                break;
+            case numTrueQuest === 50:
+                p.textContent = 'Вы выполнили 50 заданий!'
+                break;
+            case numTrueQuest === 100:
+                p.textContent = 'СОТКА!'
                 break;
         }
         bluer.classList.add('bluer')

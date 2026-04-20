@@ -27,31 +27,31 @@ butProfile.addEventListener('click', (e) => {
         switch(true){
             
             case element === 1:
-                img.setAttribute('src', 'main/ach/bronz_zvezda.png')
+                img.setAttribute('src', './main/ach/bronz_zvezda.png')
                 achievements.append(img)
                 break;
             case element === 2:
-                img.setAttribute('src', 'main/ach/serebro_zvezda.webp')
+                img.setAttribute('src', './main/ach/serebro_zvezda.webp')
                 achievements.append(img)
                 break;
             case element === 5:
-                img.setAttribute('src', 'main/ach/gold_zvezda.png')
+                img.setAttribute('src', './main/ach/gold_zvezda.png')
                 achievements.append(img)
                 break;
             case element === 10:
-                img.setAttribute('src', 'main/ach/iz_zvezda.png')
+                img.setAttribute('src', './main/ach/iz_zvezda.png')
                 achievements.append(img)
                 break;
             case element === 20:
-                img.setAttribute('src', 'main/ach/yx.png')
+                img.setAttribute('src', './main/ach/yx.png')
                 achievements.append(img)
                 break;
             case element === 50:
-                img.setAttribute('src', 'main/ach/kubok.png')
+                img.setAttribute('src', './main/ach/kubok.png')
                 achievements.append(img)
                 break;
             case element === 100:
-                img.setAttribute('src', 'main/ach/100.png')
+                img.setAttribute('src', './main/ach/100.png')
                 achievements.append(img)
                 break;
         }
