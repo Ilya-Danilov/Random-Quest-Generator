@@ -15,7 +15,15 @@ butProfile.addEventListener('click', (e) => {
 
     //Кд
     const dataUser = JSON.parse(localStorage.getItem('AboutTheUsers'))
-    pracent.textContent = `${(dataUser.trueQuest / dataUser.falseQuest).toFixed(2)}`
+    if(dataUser.trueQuest === 0){
+        pracent.textContent = '0'
+    }
+    else if(dataUser.falseQuest === 0){
+        pracent.textContent = `${(dataUser.trueQuest / 1).toFixed(2)}`
+    }
+    else{
+        pracent.textContent = `${(dataUser.trueQuest / dataUser.falseQuest).toFixed(2)}`
+    }
 
     //Отображение достижений в профиле 
     const dataUserAch = JSON.parse(localStorage.getItem('AboutTheUsers'))
