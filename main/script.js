@@ -9,7 +9,7 @@ if(localStorage.getItem('AboutTheUsers') === null){
 const greeting = document.getElementById('greeting-back')
 const formLevel = document.getElementById('form-greeting')
 const level = document.getElementById('complexity')
-const inputCategoty = document.querySelectorAll('.category-set')
+const inputCategoty = document.querySelectorAll('.category')
 const createQuest = document.getElementById('get-a-quest')
 const containerForQuest = document.getElementById('container-for-quest')
 const butDoneQuests = document.getElementById('but-fo-done-cards')

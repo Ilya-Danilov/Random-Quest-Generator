@@ -1,6 +1,6 @@
 import * as localStorageFun from '../localStorafe.js'
 
-const inputCategoty = document.querySelectorAll('.category-set')
+const inputCategoty = document.querySelectorAll('.category')
 const formSettings = document.getElementById('form-setting')
 const level = document.getElementById('complexity-set')
 const butSettings = document.getElementById('settings')
