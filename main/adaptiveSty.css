@@ -1,53 +1,56 @@
 @media (max-width: 885px) {
-    .container-for-quest{
-        width: 95%;
-    }
-    nav{
-        display: flex;
-        flex-direction: column;
-    }
-    .div-but-condition{
-        width: 95%;
-    }
-    .containerAch{
-        width: 90%;
-    }
+  .container-for-quest {
+    width: 95%;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .div-but-condition {
+    width: 95%;
+  }
+  .containerAch {
+    width: 90%;
+  }
 }
 
 @media (max-width: 600px) {
-    .imgAch{
-        width: 70%;
-    }
-    .containerAch{
-        height: 60%;
-    }
-    .butDel{
-        bottom: 180px;
-    }
-    .card-quest-active{
-        padding: 10px;
-    }
-    .container-for-but{
-        gap: 5px;
-    }
-    .quest__but{
-        font-size: 10px;
-    }
-    .quest_text{
-        font-size: 20px;
-    }
+  .imgAch {
+    width: 70%;
+  }
+  .containerAch {
+    height: 60%;
+  }
+  .butDel {
+    bottom: 180px;
+  }
+  .card-quest-active {
+    padding: 10px;
+  }
+  .container-for-but {
+    gap: 5px;
+  }
+  .quest__but {
+    font-size: 10px;
+  }
+  .quest_text {
+    font-size: 20px;
+  }
+  .p-for-greeting {
+    font-size: 1000px;
+  }
 }
 
 @media (max-width: 400px) {
-    .card-quest-active{
-        align-items: start;
-        justify-content: start;
-    }
-    .div-name-and-but{
-        height: 96px;
-    }
-    .container-for-but{
-        flex-direction: column;
-        margin-bottom: 45px;
-    }
+  .card-quest-active {
+    align-items: start;
+    justify-content: start;
+  }
+  .div-name-and-but {
+    height: 96px;
+  }
+  .container-for-but {
+    flex-direction: column;
+    margin-bottom: 45px;
+  }
 }

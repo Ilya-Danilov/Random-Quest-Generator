@@ -1,292 +1,288 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    user-select: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  user-select: none;
 }
 
-body{
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url(./qwerty.webp);
-    background-color: black;
-    background-attachment: fixed
+body {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(./qwerty.webp);
+  background-color: black;
+  background-attachment: fixed;
 }
 
-nav{
-    position: absolute;
-    padding: 10px;
-    display: flex;
-    justify-content: end;
-    gap: 10px;
-    top: 10px;
-    right: 10px;
+nav {
+  position: absolute;
+  padding: 10px;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  top: 10px;
+  right: 10px;
 }
 
-button{
-    cursor: pointer;
+button {
+  cursor: pointer;
 }
 
-.nav{
-    padding: 15px;
-    border: 1px solid black;
-    background: rgba(165, 164, 164, 0.412); 
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.319);
-    border-radius: 12px;
+.nav {
+  padding: 15px;
+  border: 1px solid black;
+  background: rgba(165, 164, 164, 0.412);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.319);
+  border-radius: 12px;
 }
 
-.quest-title{
-    padding: 20px;
-    color: white;
+.quest-title {
+  padding: 20px;
+  color: white;
 }
 
-.get-a-quest{
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    background: rgba(165, 164, 164, 0.858); 
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.319);
+.get-a-quest {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background: rgba(165, 164, 164, 0.858);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.319);
 }
 
-.container-for-quest{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 60%;
-    background-color: white;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.02); 
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);;
-    padding: 20px;
+.container-for-quest {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60%;
+  background-color: white;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px;
 }
 
-.quest{
-    padding: 0px 10px;
-    display: flex;
-    align-items: center;
-    text-align: start;
-    width: 100%;
-    height: 70px;
-    background-color: white;
-    border-radius: 20px;
-    background: rgba(134, 134, 134, 0.765); 
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.319);
-    justify-content: space-between;
+.quest {
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  text-align: start;
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  border-radius: 20px;
+  background: rgba(134, 134, 134, 0.765);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.319);
+  justify-content: space-between;
 }
 
-.quest:hover{
-    background: rgba(210, 209, 209, 0.831); 
+.quest:hover {
+  background: rgba(210, 209, 209, 0.831);
 }
 
-.quest_text{
-    font-size: 25px;
-
+.quest_text {
+  font-size: 25px;
 }
 
-.quest__but{
-    padding: 5px;
-    border-radius: 5px;
+.quest__but {
+  padding: 5px;
+  border-radius: 5px;
 }
 
-.but-miss{
-    background-color: red;
+.but-miss {
+  background-color: red;
 }
-.but-in-progress{
-    background-color: orange;
-}
-
-.but-done{
-    background-color: green;
+.but-in-progress {
+  background-color: orange;
 }
 
-.but-profile{
-    background-image: url(./png-klev-club-m6sy-p-znachok-profilya-png-21.png);
-    background-size: cover;
-
+.but-done {
+  background-color: green;
 }
 
-.but-settings{
-    background-image: url(./—Pngtree—settings\ icon_4491632.png);
-    background-size: 105%;
+.but-profile {
+  background-image: url(./png-klev-club-m6sy-p-znachok-profilya-png-21.png);
+  background-size: cover;
 }
 
-.window-back{
-    display: none;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    backdrop-filter: blur(3px);
+.but-settings {
+  background-image: url(./—Pngtree—settings\ icon_4491632.png);
+  background-size: 105%;
 }
 
-.window{
-    position: relative;
-    background-color: white;
-    width: 35vw;
-    height: 75vh;
-    min-width: 300px;
-    border-radius: 20px;
-    background: rgba(134, 134, 134, 0.514); 
-    border: 1px solid rgba(255, 255, 255, 0.319);
-    box-shadow: 0 0 15px 5px rgb(173, 173, 173);
-    z-index: 9999;
-    text-align: center;
-}
-.window:hover{
-    background: rgba(207, 206, 206, 0.752); 
+.window-back {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(3px);
 }
 
-.card-quest{
-    width: 100%;
-    height: 100%;
-    text-align: left;
-    background: rgba(177, 177, 177, 0.456);
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.319);;
+.window {
+  position: relative;
+  background-color: white;
+  width: 35vw;
+  height: 75vh;
+  min-width: 300px;
+  border-radius: 20px;
+  background: rgba(134, 134, 134, 0.514);
+  border: 1px solid rgba(255, 255, 255, 0.319);
+  box-shadow: 0 0 15px 5px rgb(173, 173, 173);
+  z-index: 9999;
+  text-align: center;
+}
+.window:hover {
+  background: rgba(207, 206, 206, 0.752);
 }
 
-.card-quest:hover{
-    background: rgba(218, 217, 217, 0.651);
+.card-quest {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  background: rgba(177, 177, 177, 0.456);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.319);
 }
 
-.card-quest-resolved{
-    display: none;
+.card-quest:hover {
+  background: rgba(218, 217, 217, 0.651);
 }
 
-.card-quest-skipped{
-    display: none;
+.card-quest-resolved {
+  display: none;
 }
 
-.div-but-condition{
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
-    padding: 0px 20px;
-    margin-bottom: 10px;
+.card-quest-skipped {
+  display: none;
 }
 
-.but-status-card{
-    padding: 5px;
-    border-radius: 15px;
-    border: 1px solid black;
+.div-but-condition {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  padding: 0px 20px;
+  margin-bottom: 10px;
 }
 
-.but-for-done-cards{
-    background-color: rgba(0, 128, 0, 0.611);
+.but-status-card {
+  padding: 5px;
+  border-radius: 15px;
+  border: 1px solid black;
 }
 
-.but-for-done-cards:hover{
-    background-color: green;
+.but-for-done-cards {
+  background-color: rgba(0, 128, 0, 0.611);
 }
 
-.but-for-current-cards{
-    background-color: rgba(153, 153, 153, 0.611);
+.but-for-done-cards:hover {
+  background-color: green;
 }
 
-.but-for-current-cards:hover{
-    background-color: rgb(153, 153, 153);
+.but-for-current-cards {
+  background-color: rgba(153, 153, 153, 0.611);
 }
 
-.but-for-skip-cards{
-    background-color: rgba(255, 0, 0, 0.611);
+.but-for-current-cards:hover {
+  background-color: rgb(153, 153, 153);
 }
 
-.but-for-skip-cards:hover{
-    background-color: rgb(255, 0, 0);
+.but-for-skip-cards {
+  background-color: rgba(255, 0, 0, 0.611);
 }
 
-.div-name-and-but{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.but-for-skip-cards:hover {
+  background-color: rgb(255, 0, 0);
 }
 
-.div-description{
-    margin-top: 5px;
-    display: none;
+.div-name-and-but {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.container-for-but{
-    height: 30px;
-    display: flex;
-    gap: 10px;
+.div-description {
+  margin-top: 5px;
+  display: none;
 }
 
-.divdsvsifvosfvnoasf{
-    background: rgba(235, 155, 7, 0.47);
+.container-for-but {
+  height: 30px;
+  display: flex;
+  gap: 10px;
 }
 
-.yellow{
-    background: rgba(255, 225, 0, 0.601);
+.divdsvsifvosfvnoasf {
+  background: rgba(235, 155, 7, 0.47);
 }
 
-.yellow:hover{
-    background: rgba(255, 204, 0, 0.881);
+.yellow {
+  background: rgba(255, 225, 0, 0.601);
 }
 
-.green{
-    background: rgba(44, 175, 0, 0.601);
+.yellow:hover {
+  background: rgba(255, 204, 0, 0.881);
 }
 
-.green:hover{
-    background: rgb(18, 146, 2);
+.green {
+  background: rgba(44, 175, 0, 0.601);
 }
 
-.red{
-    background: rgba(255, 0, 0, 0.599);
+.green:hover {
+  background: rgb(18, 146, 2);
 }
 
-.red:hover{
-    background: red
+.red {
+  background: rgba(255, 0, 0, 0.599);
 }
 
-.bluer{
-    position: fixed;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    backdrop-filter: blur(3px);
+.red:hover {
+  background: red;
 }
 
-.containerAch{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-    width: 40%;
-    height: 70%;
-    background: rgba(188, 188, 188, 0.549);
-    border-radius: 15px;
-    align-items: center;
-    text-align: center;
-}
-.containerAch:hover{
-    background: rgba(227, 227, 227, 0.881);
+.bluer {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(3px);
 }
 
-.imgAch{
-    width: 50%;
+.containerAch {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  width: 40%;
+  height: 70%;
+  background: rgba(188, 188, 188, 0.549);
+  border-radius: 15px;
+  align-items: center;
+  text-align: center;
+}
+.containerAch:hover {
+  background: rgba(227, 227, 227, 0.881);
 }
 
-.butDel{
-    padding: 5px;
-    background-color: green;
-    position: fixed;
-    bottom: 160px;
+.imgAch {
+  width: 50%;
 }
 
-
+.butDel {
+  padding: 5px;
+  background-color: green;
+  position: fixed;
+  bottom: 160px;
+}

@@ -1,61 +1,61 @@
-.name-profile{
-    margin-top: 30px;
-    font-size: 40px;
+.name-profile {
+  margin-top: 30px;
+  font-size: 40px;
 }
 
-.date-regis{
-    font-size: 20px;
-    margin-bottom: 50px;
-    margin-top: 15px;
+.date-regis {
+  font-size: 20px;
+  margin-bottom: 50px;
+  margin-top: 15px;
 }
 
-.info{
-    display: flex;
-    flex-direction: column;
+.info {
+  display: flex;
+  flex-direction: column;
 }
 
-.info-child{
-    display: flex;
-    flex-direction: column;
+.info-child {
+  display: flex;
+  flex-direction: column;
 }
 
-.progress{
-    margin-bottom: 35px;
+.progress {
+  margin-bottom: 35px;
 }
 
-.p-for-pracent{
-    font-size: 20px;
-    margin-bottom: 25px;
+.p-for-pracent {
+  font-size: 20px;
+  margin-bottom: 25px;
 }
 
-.pracent{
-    font-size: 50px;
+.pracent {
+  font-size: 50px;
 }
 
-.p-for-achievements{
-    font-size: 20px;
-    margin-bottom: 10px;
+.p-for-achievements {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
-.img-achievements{
-    width: 30px;
-    height: 30px;
-    box-sizing: 100%;
+.img-achievements {
+  width: 30px;
+  height: 30px;
+  box-sizing: 100%;
 }
 
-.exit-on-profile{
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 25px;
-    height: 25px;
-    border-radius: 50px;
-    background-color: rgba(151, 151, 151, 0);
-    background-image: url(./exit.png);
-    background-size: 100%;
+.exit-on-profile {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  background-color: rgba(151, 151, 151, 0);
+  background-image: url(./exit.png);
+  background-size: 100%;
 }
 
-.achImg{
-    width: 50px;
-    height: 50px;
+.achImg {
+  width: 50px;
+  height: 50px;
 }

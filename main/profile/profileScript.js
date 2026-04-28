@@ -1,78 +1,72 @@
-const butProfile = document.getElementById('profile')
-const windowProfile = document.getElementById('window-profile')
-const exitOfPorfile = document.getElementById('exit-on-profile')
-const userName = document.getElementById('name-profile')
-const dateRegis = document.getElementById('date-regis')
-const pracent = document.getElementById('pracent')
-const achievements = document.getElementById('ach')
+const butProfile = document.getElementById("profile");
+const windowProfile = document.getElementById("window-profile");
+const exitOfPorfile = document.getElementById("exit-on-profile");
+const userName = document.getElementById("name-profile");
+const dateRegis = document.getElementById("date-regis");
+const pracent = document.getElementById("pracent");
+const achievements = document.getElementById("ach");
 
+//Открываем профиль
+butProfile.addEventListener("click", (e) => {
+  // e.defaultPrevented()
+  //Открытие профиля
+  windowProfile.style.display = "flex";
 
-//Открываем профиль 
-butProfile.addEventListener('click', (e) => {
-    // e.defaultPrevented()
-    //Открытие профиля
-    windowProfile.style.display = 'flex'
+  //Кд
+  const dataUser = JSON.parse(localStorage.getItem("AboutTheUsers"));
+  if (dataUser.trueQuest === 0) {
+    pracent.textContent = "0";
+  } else if (dataUser.falseQuest === 0) {
+    pracent.textContent = `${(dataUser.trueQuest / 1).toFixed(2)}`;
+  } else {
+    pracent.textContent = `${(dataUser.trueQuest / dataUser.falseQuest).toFixed(2)}`;
+  }
 
-    //Кд
-    const dataUser = JSON.parse(localStorage.getItem('AboutTheUsers'))
-    if(dataUser.trueQuest === 0){
-        pracent.textContent = '0'
+  //Отображение достижений в профиле
+  const dataUserAch = JSON.parse(localStorage.getItem("AboutTheUsers"));
+  achievements.innerHTML = "";
+
+  dataUserAch.ach.forEach((element) => {
+    const img = document.createElement("img");
+    img.classList.add("achImg");
+    switch (true) {
+      case element === 1:
+        img.setAttribute("src", "./main/ach/bronz_zvezda.png");
+        achievements.append(img);
+        break;
+      case element === 2:
+        img.setAttribute("src", "./main/ach/serebro_zvezda.webp");
+        achievements.append(img);
+        break;
+      case element === 5:
+        img.setAttribute("src", "./main/ach/gold_zvezda.png");
+        achievements.append(img);
+        break;
+      case element === 10:
+        img.setAttribute("src", "./main/ach/iz_zvezda.png");
+        achievements.append(img);
+        break;
+      case element === 20:
+        img.setAttribute("src", "./main/ach/yx.png");
+        achievements.append(img);
+        break;
+      case element === 50:
+        img.setAttribute("src", "./main/ach/kubok.png");
+        achievements.append(img);
+        break;
+      case element === 100:
+        img.setAttribute("src", "./main/ach/100.png");
+        achievements.append(img);
+        break;
     }
-    else if(dataUser.falseQuest === 0){
-        pracent.textContent = `${(dataUser.trueQuest / 1).toFixed(2)}`
-    }
-    else{
-        pracent.textContent = `${(dataUser.trueQuest / dataUser.falseQuest).toFixed(2)}`
-    }
-
-    //Отображение достижений в профиле 
-    const dataUserAch = JSON.parse(localStorage.getItem('AboutTheUsers'))
-    achievements.innerHTML = ''
-
-    dataUserAch.ach.forEach(element => {
-        const img = document.createElement('img')
-        img.classList.add('achImg')
-        switch(true){
-            
-            case element === 1:
-                img.setAttribute('src', './main/ach/bronz_zvezda.png')
-                achievements.append(img)
-                break;
-            case element === 2:
-                img.setAttribute('src', './main/ach/serebro_zvezda.webp')
-                achievements.append(img)
-                break;
-            case element === 5:
-                img.setAttribute('src', './main/ach/gold_zvezda.png')
-                achievements.append(img)
-                break;
-            case element === 10:
-                img.setAttribute('src', './main/ach/iz_zvezda.png')
-                achievements.append(img)
-                break;
-            case element === 20:
-                img.setAttribute('src', './main/ach/yx.png')
-                achievements.append(img)
-                break;
-            case element === 50:
-                img.setAttribute('src', './main/ach/kubok.png')
-                achievements.append(img)
-                break;
-            case element === 100:
-                img.setAttribute('src', './main/ach/100.png')
-                achievements.append(img)
-                break;
-        }
-    });
-})
-
+  });
+});
 
 //Закрываем профиль
-exitOfPorfile.addEventListener('click', () => {
-    windowProfile.style.display = 'none'
-})
-
+exitOfPorfile.addEventListener("click", () => {
+  windowProfile.style.display = "none";
+});
 
 // Добавляем в профиль имя и дату
-userName.textContent = JSON.parse(localStorage.getItem('AboutTheUsers')).name
-dateRegis.textContent = `Дата регистрации: ${new Date(JSON.parse(localStorage.getItem('AboutTheUsers')).dateRegis).toLocaleDateString('ru-RU')}`
+userName.textContent = JSON.parse(localStorage.getItem("AboutTheUsers")).name;
+dateRegis.textContent = `Дата регистрации: ${new Date(JSON.parse(localStorage.getItem("AboutTheUsers")).dateRegis).toLocaleDateString("ru-RU")}`;
